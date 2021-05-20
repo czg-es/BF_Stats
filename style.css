@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    
+    font-family:"Segoe UI",Arial,sans-serif;
+    font-weight:400;
+    /* background: lightslategray; */
+    background: url(./Bf1/img/bf_e.png);
+    background-position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+p{
+    margin: auto;
+    border:  2px solid #00000057;
+    background: #00000057;
+    padding: 2em;
+    font-size: 1em;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight:400;
+    color: lightgoldenrodyellow;
+    /* animation-name: appear;
+    animation-duration: 5s;
+    animation-timing-function:ease; */
+}
+.inf_div{
+    margin-top: 3em;
+    width: 80vw;
+    height: auto;
+    padding: 2em;
+    background: #00000057;
+}
+.frame{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+}
+.btn{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: none;
+    cursor: pointer;
+    position:absolute;
+    top: 0;
+    right: 0;
+    margin: 1em;
+    padding: 1em;
+    z-index: 20;
+    border-radius: 20px;
+    background: #ffffff7e;
+}
+.start{
+    
+    cursor: pointer;
+    margin: 0.2em;
+    padding: 1.5em;
+    z-index: 20;
+    border-radius: 10px;
+    background: #ffffff7e;
+}
+.name_wrapper{
+    animation-name: grow;
+    animation-duration: 1s;
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    /* margin: 1em; */
+    padding:  1em 1em 0.1em 1em;
+    z-index: 20;
+}
+
+
+@keyframes appear {
+    from {
+        transform: translateY(1000px) ;
+     }
+    to {
+        transform: translateY(0px) ;
+    }
+  }
+
+
+@keyframes grow {
+    from {
+        transform: scale3d(0, 0, 0 ) ;
+    }
+    to {
+        transform: scale3d(1, 1, 1 ) ;
+    }
+  }
+
+
+@media all and (orientation: portrait) { 
+    .name_wrapper{
+        font-size: small;
+    }
+    .btn{
+        padding:1em 0.1em 1em;
+        margin: 0;
+        background: whitesmoke;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,201 @@
+:root {
+    --fondo: #ac630fb2;
+    --fondoStats_trans: #ac630fe5;
+    --fondoStats_trans_plus: #ac630f88;
+    --fondoStats_solid: #ac630f;
+
+    --letras: #ffffff;
+  }
+  
+body{
+    background-image: url("img/BF1_fondo.jpg");
+    background-position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family:"Segoe UI",Arial,sans-serif;
+    /* font-weight:400; */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    animation-name: grow;
+    animation-duration: 0.5s;
+}
+#weapon_select, #weapon_select2{
+    z-index: 3;
+    background: var(--fondo);
+    color: white;
+    box-shadow: 1px 1px 5px 5px #00000048 inset; 
+    box-shadow: 1px 1px 5px 5px #00000048 ; 
+}
+
+#weapon_select > option,
+#weapon_select2 > option{
+    background: var(--fondo);
+    color: white;
+}
+
+#weapon_select > option:nth-child(1),
+#weapon_select2 > option:nth-child(1),
+#weapon_select > option:nth-child(29),
+#weapon_select2 > option:nth-child(29),
+#weapon_select > option:nth-child(63),
+#weapon_select2 > option:nth-child(63),
+#weapon_select > option:nth-child(93),
+#weapon_select2 > option:nth-child(93),
+#weapon_select > option:nth-child(125),
+#weapon_select2 > option:nth-child(125),
+#weapon_select > option:nth-child(137),
+#weapon_select2 > option:nth-child(137)
+
+{
+    background: #ffd000 ;
+}
+
+.imgs > div span, .imgs > div h3{
+    background: var(--fondo);
+    color: #c5b7a7;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+img{
+    animation-name: appear;
+    animation-duration: 0.5s;
+    width:100%;
+    border-radius: 20px;
+    background: var(--fondo);
+    
+    box-shadow: 1px 1px 5px 5px #00000048 inset;
+    border: var(--fondo) 0.1rem solid ;
+    
+}
+.imgs > div img{
+    padding: 0.4em;
+    background: #00000048;
+}
+
+.wrapper{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 15% 70% 10%;
+}
+.main{
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    box-shadow: 1px 1px 5px 5px #00000048 inset;
+}
+#weapon_names{
+    z-index: 5;
+    align-content: center;
+    padding: 1em;
+    box-shadow: 1px 1px 5px 5px #00000048 inset;
+}
+#weapon_list{
+    padding-bottom: 1em;
+}
+
+#weapon_stats{
+    display: flex;
+    flex-direction: row;
+    height: 65vh;
+    overflow-y: auto;
+    overflow-x: auto;
+    margin-left: 0.5em;
+    box-shadow: 1px 1px 5px 5px #00000048 inset;
+
+}
+.s0,.s1,.s2{
+    color: #EFFEC7;
+    padding-right: 1em;
+    background: var(--fondoStats_trans);
+    border-radius: 5%;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+.s1,.s0 {
+    justify-content: flex-end;
+}
+.s0{
+    background:var(--fondoStats_solid);
+}
+.s1{
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+span{
+    background: transparent;
+    padding: 0.1em 0 0.1em 1em;
+    animation-name: appear;
+    animation-duration: 0.5s;
+}
+
+#stats0{
+    position:sticky; 
+    left:0;
+}
+.imgs{
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 80vh;
+    overflow-x: auto;
+    padding: 1em;
+}
+#footer{
+    box-shadow: 1px 1px 5px 5px #00000048 inset;
+    padding-left: 2em;
+    color: #BA6E15;
+    display: flex;
+    flex-direction: row;
+    background: var(--fondoStats_trans_plus);
+}
+#title{
+    animation-name: grow;
+    animation-duration: 1s;
+}
+
+
+@keyframes grow {
+    from {
+        transform: scale3d(0, 0, 0 ) ;
+    }
+    to {
+        transform: scale3d(1, 1, 1 ) ;
+    }
+  }
+
+@keyframes appear {
+    from {
+        transform: translateY(1000px) ;
+     }
+    to {
+        transform: translateY(0px) ;
+    }
+  }
+
+@media all and (orientation: portrait) { 
+    .main{
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+    }
+    .imgs{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    #img1,#img2{
+        padding: 0.5em;
+    }
+    h2{
+        font-size: 1.3rem;
+    }
+    
+}

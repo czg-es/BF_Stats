@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>---</title>
+</head>
+<body>
+    <div class="inf_div" id="inf_div">
+        <p class="info" id="info">
+        <center><button id="start" class="start" onClick="parent.newSrc();">EMPEZAR</button></center>
+    </div>
+    <script>
+        let paragraph = document.getElementById("info");
+        const espa =`
+        En este proyecto se analizan las caracter&iacute;sticas de las armas de Battlefield 1 y 5.<br>
+            <br>
+            Primero las estad&iacute;sticas son cargadas a un objeto javascript.<br>
+            Despues los datos son extraidos y representados en el DOM.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;las estadisticas y valores son cargadas por cada arma cuando son seleccionadas en el menu desplegable.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;El nombre del arma es procesado para mostrarlo junto con sus accesorios/variantes segun corresponda<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Se muestra la imagen del arma en funcion de sus nombre.<br>
+            Por ultimo y solo si hay 2 armas seleccionadas se comparan los valores de cada arma  y se aplica color verde al mayor de los dos.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Hay que tener en cuenta que un valor mayor no siempre es mejor.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Ej. mayor Rof (rate of fire) es mejor pero mayor Spread (dispersion) es peor.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Teniendo esto en cuenta , en un futuro tal vez añada una mejor implementaci&oacute;n para esta logica.<br>
+            <br>
+            <button id="lang_change" class="lang_change" onClick="self.lang();">ENGLISH</button>
+        `;
+        const engl=`
+        This project analizes weapon and characteristics of battlefield 1 & 5.<br>
+            <br>
+            First the stats are loaded in a javascript object.<br>
+            Then the data is extracted and represented in the DOM.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Stats names and values are loaded per gun when selected from the drop-down menu.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;The weapon name is processed to be shown along the accesories and variants where appropiate.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;A weapon image is shown based on the name.<br>
+            Lastly and only if two weapons are selected, the values of each weapon are compared and the highest is colored green.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Keep in mind that a higher value is not always the best.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Ex.higher Rof ( rate of fire ) is better while a higher Spread is worst.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;having this in mind, maybe I´ll update the logic for a better implementation of this in the future.<br>
+            <br>
+            <button id="lang_change" class="lang_change" onClick="self.lang();">ESPAÑOL</button>
+        `
+        paragraph.innerHTML = espa;
+        let esp = true;
+        function lang(){
+            if(esp){
+                paragraph.innerHTML = engl;
+                esp = false;
+                document.getElementById("start").firstChild.data="START";
+            }else {
+                paragraph.innerHTML = espa;
+                esp = true;
+                document.getElementById("start").firstChild.data="EMPEZAR";
+            }
+    }
+    </script>
+</body>
+</html>

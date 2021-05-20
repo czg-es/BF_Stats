@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BF1 STATS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <div id="wrapper" class="wrapper">
+            <div id="weapon_names">
+                <div id="weapon_list">
+                    <select id="weapon_select" onchange="showWeaponALL(this.value,1)" ></select>
+                    <select id="weapon_select2" onchange="showWeaponALL(this.value,2)"></select>
+                    
+                </div>
+            </div>
+            <div id="main" class="main">
+                    <div id="weapon_stats">
+                        <div id="stats0"></div>
+                        <div id="stats1"></div>
+                        <div id="stats2"></div>
+                    </div>
+                    <div class="imgs">
+                        <div id="img1"></div>
+                        <div id="img2"></div>
+                    </div>
+            </div> 
+            <div id="footer">
+                <div id="w-1">
+                    <h2 id="title"> Battlefield 1 Stats Comparator </h2>
+                </div>
+                <div id="w-2"></div>
+            </div>
+        </div>
+        
+        <script src="data/bf1_Stats_Object.js"></script>
+        <script type="text/javascript" src="bf1.js"></script>
+    </body>
+</html>
